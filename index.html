@@ -1,47 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <description></description>
+    <meta name="description" content="Loja de produtos eletrônicos">
+    <title>TechShop — Loja de eletrônicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body class="tema-claro">
+<body>
     <header>
-        <section class="dispor-a-direita">
-            <div id="circulo-vermelho"></div>
-            <div id="texto-ao-vivo">Ao vivo </div>
-            <div id="hora-atual">ox</div>
-            <button id="botao-tema">Claro</button>
-        </section>
-        <section>
-
-        </section>
+        <div class="masthead">
+            <div class="container masthead-content">
+                <a href="#" class="logo" aria-label="TechShop - página inicial">TechShop</a>
+                <nav aria-label="Navegação principal">
+                    <a href="#inicio">Áudio</a>
+                    <a href="#inicio">Acessórios</a>
+                    <a href="#inicio">Casa</a>
+                    <a href="#inicio">Vestível</a>
+                </nav>
+                <form id="formBusca" class="search-form">
+                    <label for="busca" class="sr-only">Buscar notícias</label>
+                    <input id="busca" type="search" placeholder="Buscar..." autocomplete="off">
+                    <button type="submit" aria-label="Pesquisar">Pesquisar</button>
+                </form>
+                <button>Carrinho</button>
+                <button id="tema" class="theme-button" type="button" aria-label="Alternar tema">☾</button>
+            </div>
+        </div>
     </header>
-    <section>
-        <section class="grade-noticia">
-            <article>
-                <div class="imagem">imagem</div>
-            </article>
-            <article>
-                <div class="imagem">imagem</div>
-            </article>
-            <article>
-                <div class="imagem">imagem</div>
-            </article>
-            <article>
-                <div class="imagem">imagem</div>
-            </article>
-            <article>
-                <div class="imagem">imagem</div>
-            </article>
-            <article>
-                <div class="imagem">imagem</div>
+    <main id="inicio">
+        <section class="hero-section container">
+            <article class="hero-main">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+                        alt="Placa de circuito eletrônico representando tecnologia">
+                </div>
+                <div class="hero-content">
+                    <span class="category technology">TECNOLOGIA</span>
+                    <h1>A nova geração da inteligência artificial está mudando a forma como trabalhamos</h1>
+                    <p>Áudio, acessórios e gadgets selecionados com até 30% de desconto. Entrega rápida para todo o país.</p>
+                    
+                </div>
             </article>
         </section>
-    </section>
-    <footer>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, sint eligendi obcaecati nulla beatae dolore ipsa, in fuga tempora consequatur nesciunt soluta quam asperiores! Ut natus minima mollitia excepturi provident.</footer>
+        <section id="secao-produtos" class="container">
+            <div class="filtros">
+                <button class="filter-button active" type="button" data-categoria="todas">Todas</button>
+                <button class="filter-button" type="button" data-categoria="audio">Áudio</button>
+                <button class="filter-button" type="button" data-categoria="acessorio">Acessório</button>
+                <button class="filter-button" type="button" data-categoria="casa">Casa</button>
+                <button class="filter-button" type="button" data-categoria="vestivel">Vestível</button>
+            </div>
+            <div id="gradeProdutos" class="grade-produtos"></div>
+            <p id="semResultados" class="empty-state">Nenhum produto encontrado.</p>
+        </section>
+        <section class="descontoNewsletter">
+            <h2>Ganhe 10% na primeira compra</h2>
+            <p>Assine a newsletter e receba o cupom de boas-vindas, além das ofertas da semana.</p>
+            <form id="formNewsletter">
+                <label for="email" class="sr-only">Seu e-mail</label>
+                <input id="email" type="email" placeholder="seu@email.com" autocomplete="email">
+                <button type="submit">Quero o cupom</button>
+            </form>
+            <p id="mensagemNewsletter" class="newsletter-message"></p>
+        </section>
+        <div id="carrinhoCompras">
+
+        </div>
+    </main>
+    <footer id="sobre">
+        <div class="container footer-content">
+            <div>
+                <p>© 2026 TechShop. Loja-modelo para fins didáticos.</p>
+            </div>
+            <div class="referencias">
+                <a href="#">Trocas</a>
+                <a href="#">Entrega</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
